@@ -1,0 +1,83 @@
+
+{%  extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Title</title>
+        <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #2bebf1;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+                color: #020008;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;  
+            }
+            .title span {
+                color: #020f14;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+        </style>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='header'>
+                <p class='title'><b><br> <img src="{% static 'images/p.jpg' %}" height=50 width=50 class="d-inline-block alighn-top" /><br>Probaho Courier Services's  BILL
+                    <br>
+                    
+Head Office Address: 24/25 Dilkusha C/A, Dhaka-1000, Bangladesh<br>
+
+Email : info@probahocourier.com.bd<br>
+mail@probahocourier.com.bd<br>
+Telephone: 9564218, 9551984<br>
+Fax: 880-2-9563995</b>
+                  </p>
+                <p></p>
+            </div>
+        <div>
+        <div class='details'>
+            <p style="background-color:rgb(152, 222, 255);"> <b style="font-size:20px;" >Serial no :</b> {{order.serial_no }} <br/>
+            <b style="font-size:20px;">Customer Name :</b> {{order.customer_name}} <br/>
+            <b style="font: size 20px;">Phone :</b> {{order.contract}} <br/></p>
+            
+            <p style="background-color:rgb(252, 223, 250)"><b style="font-size:20px;"> Ammount : </b>{{order.payment}}  <br/>
+            <b style="font-size:20px;">Date Orderd :</b> {{order.pub_date_pretty}}<br/></p>
+            <p style="background-color:rgb(173, 179, 199)"><b style="font-size:20px;">Payment Status :</b> {{order.status}} <br/></p>
+            <p style="background-color:rgb(148, 169, 233)"><b style="font-size:20px;">Destination :</b> {{order.destination }} <br/></p>
+            <p style="background-color:rgb(179, 236, 255);"><b style="font-size:20px;"> Receiver :</b> {{order.receiver}} <br/>
+            <b style="font-size:20px;"> Receiver's Phone Number</b> {{order.phn}} <br/>
+            <b style="font-size:20px;"> Packaging type :</b> {{order.packing}} <br/></p>
+            
+            <hr class='hrItem' />
+        </div>
+        
+    </div>
+    
+    </body>
+</html>
+
+
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends 'accounts/main.html' %}
+
+
+{% block content %}
+{% include 'accounts/status.html' %}
+
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>Recent Orders</h5>
+        </div>
+        
+        
+    
+    <div class="card card-body">
+        
+        <table class="table table-sm">
+            <tr>
+                <th>Customer Name</th>
+                <th>Phone</th>
+                <th>Date Orderd</th>
+                <th>Payment Status</th>
+                <th>Destination</th>
+                <th>Receiver</th>
+                <th>Phone Number</th>
+                <th>Update</th>
+                <th>Remove</th>
+                <th>Print it</th>
+            </tr>
+    
+            {% for order in generalorderlist %}
+            <tr>
+                <td><a href="{% url 'filledUp' order.id %}">{{order.customer_name}}</a></td>
+                <td>{{order.contract}}</td>
+                <td>{{order.pub_date_pretty}}</td>
+                <td>{{order.status}}</td>
+                <td>{{order.destination}}</td>
+                <td>{{order.receiver}}</td>
+                <td>{{order.phn}}</td>
+                <td><a class="btn btn-sm btn-info" href="{% url 'update_orderG' order.id%} ">Update</a></td>
+                <td><a class="btn btn-sm btn-danger" href="{% url 'delete_orderG' order.id%}">Delete</a></td>
+                <td><a class="btn btn-sm btn-info" href="{% url 'filledUp' order.id%}">Print</a></td>
+            </tr>
+        {% endfor %}"
+        
+        </table>
+    </div>
+</div>
+</div>
+{% endblock %}
