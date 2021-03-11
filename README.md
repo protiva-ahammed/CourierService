@@ -24,9 +24,9 @@ Website is a group of World Wide Web pages usually containing hyperlinks to each
 To develop the website Django Python framework had been used. Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so developer can focus on writing app without needing to reinvent the wheel. It’s free and open source.
 To develop a website 2 parts are needed.
 1.	Frontend
-1.	Backend
-**Frontend:** Html, CSS, Java Script, Bootstrap had been used in website.
-**Backend:** Python (Django) had been used in website.
-**Data Base Server:** Postgres-SQL
-**Editor:** Visual Studio
+1.	Backend <br>
+**Frontend:** Html, CSS, Java Script, Bootstrap had been used in website.<br>
+**Backend:** Python (Django) had been used in website.<br>
+**Data Base Server:** Postgres-SQL<br>
+**Editor:** Visual Studio<br>
 
